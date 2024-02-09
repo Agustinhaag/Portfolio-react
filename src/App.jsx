@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
         <Routes> 
           
-           <Route path="/user" element={<Perfil/>}/>
+           <Route path="/" element={<Perfil/>}/>
            <Route path="/github" element={<Github/>}/>
         </Routes>
     </BrowserRouter>
