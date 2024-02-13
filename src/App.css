@@ -7,10 +7,17 @@
   max-width: 1400px;
   margin: 0 auto;
 }
-
+body{
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color;
+}
 body.isDark {
   background-color: #2b2b2b;
   color: #ffffff;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color;
 }
 
 :root {
