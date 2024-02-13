@@ -603,10 +603,7 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
    border: 1px solid red !important;
 }
 .cont-github{
-
-  
   padding-top: 90px;
- 
 
 }
 
@@ -619,25 +616,27 @@ main .formdark input::placeholder, main .formdark textarea::placeholder{
   color: #2b2b2b;
 }
 
+.cont-github .cont-gral{
+  width: 95%;
+}
+
 .cont-github .cont-gral .cont-img-git{
   background-color: gainsboro ;
- 
+ min-width: 330px;
   margin-right: 10px;
   border-radius: 4px;
- 
-  
 }
 .cont-github .cont-gral .cont-img-git img{
   
     border-radius: 10px;
 }
+
 .cont-github  .cont-info h4{
   font-weight: normal;
   font-size: 30px;
- 
 }
 .cont-github  .cont-info p{
-  margin-top:40px ;
+  margin-top:22px ;
 }
 .cont-github  .cont-info p >a{
   text-decoration: none;
@@ -654,7 +653,7 @@ main .formdark input::placeholder, main .formdark textarea::placeholder{
 }
 .cont-github .cont-btn-git .git{
  
-  color: rgb(36, 36, 36);
+ 
   border: 1px solid var(--color-esp);
   text-decoration: none;
 
@@ -666,10 +665,10 @@ main .formdark input::placeholder, main .formdark textarea::placeholder{
 }
 .cont-github .cont-btn-git .linkedin{
 
-  color: rgb(36,36,36);
+  
   border: 1px solid rgb(20, 99, 190);
   text-decoration: none;
-  width: 28%;
+  
   border-radius: 20px;
 }
 .cont-github .cont-btn-git .linkedin:hover{
@@ -677,6 +676,29 @@ main .formdark input::placeholder, main .formdark textarea::placeholder{
   color: white;
 }
 @media (max-width: 790px) {
+
+  .cont-github .cont-gral{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cont-github .cont-gral .cont-info{
+    margin-top: 15px;
+    
+  }
+  .cont-github .cont-gral .cont-info h4{
+    text-align: center;
+  }
+  .cont-btn-git{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+  }
+  .cont-github .cont-gral .cont-img-git{
+    min-width: 290px;
+  }
+
   .hamb,
   .close {
     display: block;
