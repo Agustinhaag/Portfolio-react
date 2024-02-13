@@ -8,22 +8,23 @@
   margin: 0 auto;
 }
 
+body.isDark {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
 :root {
-  --fondo-header: rgba(0, 0, 0, 0.911);
-  --color-esp: rgb(240, 114, 233);
-  --fondo-section: rgba(199, 199, 199, 0.26);
+  --color-esp: #f072e9;
+  --fondo-section: rgba(160, 158, 158, 0.26);
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+ 
   height: 12vh;
-  align-items: center;
-  padding: 0 10px;
-  position: fixed;
+
   z-index: 200;
   width: 100%;
-  background: var(--fondo-header);
+ 
 }
 .close,.hamb {
   cursor: pointer;
@@ -33,17 +34,18 @@ header {
 header .container-head {
   font-size: 30px;
   color: var(--color-esp);
-  font-style: italic;
 }
 header nav {
   min-width: 105px;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
+ 
 }
+
+
+
+
 header nav a {
   color: white;
-  padding-left: 27px;
+  padding-left: 18px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -53,27 +55,18 @@ header nav a:hover {
 }
 header .contacto a {
   text-decoration: none;
-  margin: 0 10px;
-  font-size: 22px;
+  margin: 0 7px;
+  font-size: 18px;
 }
-.fa-instagram {
-  color: rgb(187, 15, 38);
+
+header div .cont-mode i{
+    font-size: 15px;
 }
-.fa-linkedin {
-  color: rgb(26, 26, 252);
-}
-.fa-envelope {
-  color: rgb(25, 146, 245);
-}
+
 
 
 /*-------------footer-------------*/
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
   height: 100%;
   background: rgb(51, 51, 51);
 }
@@ -81,28 +74,24 @@ footer p {
   margin: 15px 0;
   font-size: 20px;
 }
-footer .container-footer {
-  display: flex;
-  width: auto;
-  margin: 10px 0;
-  justify-content: space-between;
-}
+
 footer .container-footer a {
   font-size: 28px;
   margin: 0 10px;
 }
 
 main .banner {
-  padding: 0 0 30px 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+
    background-image: url(../public/file/Agustin\ haag\ \(1\).png); 
-  background-size: cover;
-  background-position: center;
-  color: white;
-  position: relative;
-  align-items: center;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   
+   background-size: cover;
+   background-position: center;
+   color: white;
+   position: relative;
+   align-items: center;
 }
 .banner::before {
   content: "";
@@ -111,13 +100,7 @@ main .banner {
   width: 100%;
   height: 100%;
 }
-main .banner .container-banner {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  text-align: center;
-}
+
 main .banner .container-banner h3 {
   margin: 155px 0 35px 0;
   font-size: 1.8rem;
@@ -127,6 +110,7 @@ main .banner .container-banner span p {
   font-size: 38px;
   word-spacing: 10px;
   margin: 30px 0;
+  min-height: 20vh;
 }
 main .banner .container-banner span p  i{
    color: var(--color-esp);
@@ -141,13 +125,10 @@ main .banner .container-banner p:nth-child(3) {
 }
 main .banner a {
   border: 2px solid white;
-  background: none;
-  color: white;
-  padding: 15px 20px;
+ 
   max-width: 145px;
   border-radius: 50px;
   text-decoration: none;
-  margin: 50px 0;
 }
 a:visited {
   text-decoration: none;
@@ -158,9 +139,6 @@ main .banner a:hover {
   transition: 0.4s;
 }
 main .info {
-  display: flex;
-  height: 100%;
-  width: 100%;
   margin-bottom: 30px;
 }
 main .info .perfil {
@@ -168,9 +146,6 @@ main .info .perfil {
   background: gainsboro;
   border-radius: 15px;
   margin: 80px 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 200px;
   max-height: 400px;
   min-width: 250px;
@@ -186,7 +161,7 @@ main .info .container-info {
 main .info .container-info h3 {
   font-size: 30px;
   font-weight: normal;
-  text-decoration: 3px underline gainsboro;
+  text-decoration: 3px underline rgb(129, 129, 129);
   text-underline-offset: 5px;
   margin-bottom: 20px;
 }
@@ -202,28 +177,25 @@ main .info .container-info p label {
 main .info .container-info p:nth-child(3) {
   font-size: 21px;
   text-transform: uppercase;
-  color: rgb(54, 54, 54);
   margin-bottom: 20px;
   font-weight: 400;
 }
 main .info .container-info p:nth-child(4) {
   font-size: 21px;
-  color: rgb(99, 98, 98);
+  
   width: 95%;
   word-spacing: 3px;
   margin-bottom: 40px;
   line-height: 33px;
 }
 main .info .container-info p span {
-  color: rgb(32, 32, 32);
+
   font-weight: 600;
 }
 main .info .container-info .container-btn-info a {
   text-decoration: none;
-  border: 1px solid rgb(22, 22, 22);
-  color: rgb(22, 22, 22);
-  background: none;
-  padding: 13px 30px;
+  
+  color: #161616;
   border-radius: 35px;
 }
 main .info .container-info .container-btn-info a:hover {
@@ -232,100 +204,88 @@ main .info .container-info .container-btn-info a:hover {
   transition: 0.4s;
 }
 main .services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: var(--fondo-section);
-  height: 100%;
-  padding: 30px 0;
 }
 main .services h2 {
   text-decoration: 3px underline rgb(160, 160, 160);
   text-underline-offset: 5px;
   text-transform: uppercase;
-  color: rgb(39, 39, 39);
+  
   margin-bottom: 25px;
 }
-main .services .container-services {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-main .services .container-services .primero {
+
+main .services .container-services .gral {
   width: 30%;
   height: 100%;
   min-height: 355px;
-  background: white;
   margin: 15px auto;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .services .container-services .primero .icon {
-  margin-top: 15px;
+.primero{
+  background: white;
+}
+.segundo{
+ background: #2b2b2b;
+}
+main .services .container-services .gral .icon {
+  margin-top: 25px;
   font-size: 30px;
   color: rgb(180, 176, 176);
 }
-main .services .container-services .primero h4 {
+main .services .container-services .gral h4 {
   font-size: 20px;
   text-transform: uppercase;
-  margin: 25px 0;
-  text-align: center;
+
 }
-main .services .container-services .primero span {
+main .services .container-services .gral span {
   border: 1px solid rgb(201, 201, 201);
   width: 20%;
   margin-bottom: 20px;
 }
-main .services .container-services .primero p:nth-child(3) {
+main .services .container-services .gral p:nth-child(3) {
   color: rgb(27, 27, 27);
   font-size: 17px;
   margin-bottom: 20px;
   text-align: center;
   word-spacing: 3px;
 }
-main .services .container-services .primero p:nth-child(4) {
+main .services .container-services .gral p:nth-child(4) {
   color: var(--color-esp);
   text-align: center;
   margin-bottom: 18px;
 }
-main .services .container-services .primero:hover {
+main .services .container-services .gral:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.712);
 }
-main .services .container-services .primero p:nth-child(5) {
+main .services .container-services .gral p:nth-child(5) {
   text-align: center;
-  color: rgb(63, 63, 63);
+  
   margin-bottom: 25px;
   width: 70%;
 }
-main .services .container-services .primero p:nth-child(6) {
+main .services .container-services .gral p:nth-child(6) {
   text-align: center;
   width: 90%;
 }
 main .habilidades {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-size: cover !important;
   background: linear-gradient(rgba(165, 47, 159, 0.664), rgba(24, 12, 12, 0.8)),
      url(../public/file/fondohab.jpg); 
-  background-size: cover;
-  background-position: center center;
   padding: 80px 0 40px 0;
+  background-position: center center;
 }
+
 main .habilidades h2 {
   color: white;
+  font-size: 20px;
   text-decoration: 2px underline rgb(160, 160, 160);
   text-underline-offset: 3px;
   margin-bottom: 40px;
 }
-main .container-skill {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+
 main .container-skill .container-hab {
   width: 50%;
   margin: 20px auto;
@@ -411,13 +371,7 @@ main .container-skill .container-hab .barra {
     width: 75%;
   }
 }
-main .proyects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 0;
-  height: 100%;
-}
+
 main .proyects h2 {
   text-align: center;
   font-size: 22px;
@@ -425,11 +379,7 @@ main .proyects h2 {
   text-underline-offset: 3px;
   margin-bottom: 20px;
 }
-main .proyects .contenedor-indicadores {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-}
+
 main .proyects .contenedor-indicadores .indicadores {
   margin-right: 10px;
 }
@@ -445,12 +395,7 @@ main .proyects .contenedor-indicadores .indicadores button:hover,
 main .proyects .contenedor-indicadores .indicadores button.activo {
   background: var(--color-esp);
 }
-main .proyects .contenedor-principal {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
+
 main .proyects .contenedor-principal .flecha-izquierda,
 main .proyects .contenedor-principal .flecha-derecha {
   position: absolute;
@@ -466,26 +411,12 @@ main .proyects .contenedor-principal .flecha-derecha {
   z-index: 300;
   transition: 0.3s;
 }
-main .proyects .contenedor-principal .flecha-izquierda {
-  left: 0;
-}
-main .proyects .contenedor-principal .flecha-derecha {
-  right: 0;
-}
+
 main .proyects .contenedor-principal .flecha-izquierda:hover,
 main .proyects .contenedor-principal .flecha-derecha:hover {
   background: rgb(0, 0, 0, 0.8);
 }
-main .proyects .contenedor-principal .contenedor-carrusel {
-  width: 100%;
-  padding: 20px 0;
-  overflow: hidden;
-  scroll-behavior: smooth;
-}
-main .proyects .contenedor-principal .contenedor-carrusel .container-proyect {
-  display: flex;
-  flex-wrap: nowrap;
-}
+
 main
   .proyects
   .contenedor-principal
@@ -527,11 +458,9 @@ main
   .container-proyect
   .proyecto
   img {
-  width: 100%;
-  height: 100%;
+  
   max-height: 238px;
   filter: grayscale(1);
-  object-fit: cover;
   transition: 0.5s;
   vertical-align: top;
 }
@@ -552,13 +481,11 @@ main
   .container-proyect
   .proyecto
   .info-proyecto {
-  position: absolute;
-  left: 0;
+ 
   background: rgba(0, 0, 0, 0.733);
   color: var(--color-esp);
-  width: 100%;
-  padding: 10px;
-  opacity: 0;
+ 
+
   bottom: -40px;
   transition: 0.5s;
 }
@@ -594,51 +521,30 @@ main
   border-radius: 0 0 10px 10px;
 }
 main .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
   background: var(--fondo-section);
-  height: 100%;
+
 }
 main .form h2, main .form .sendTrue h3 {
   margin: 70px 0 20px 0;
-  color: rgb(32, 32, 32);
+  
   text-decoration: 2px underline rgb(170, 170, 170);
   text-underline-offset: 3px;
+  font-size: 22px;
 }
 main .form .sendTrue{
-  display: flex;
-  flex-direction: column;
+
   min-height: 30vh;
-  align-items: center;
-  width: 100%;
+ 
 }
-main .form .sendTrue p{
-  margin: 15px 0;
-}
-main .form .sendTrue .container-btn-form{
-   display: flex;
-   width: 50%;
-   justify-content: flex-end;
-   margin: 20px 0;
-}
+
 main .form .sendTrue .container-btn-form button{
-  padding: 10px 20px;
-  color: black;
-  border: 1px solid rgb(151, 151, 151);
-  width: 20%;
+
+  
   border-radius: 20px;
 }
-main .form form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-bottom: 50px;
-}
-main .form form .container-input {
-  display: flex;
-  width: 100%;
-}
+
+
 main .form form .container-input .container-small {
   width: 50%;
   margin-bottom: 10px;
@@ -671,16 +577,9 @@ main .form form .container-check textarea {
 main .form form .container-check textarea::placeholder, main .form form .container-input .container-small input::placeholder, main .form form .container-check input::placeholder{
   padding-left: 4px;
 }
-main .form form .container-btn-form {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+
 main .form form .container-btn-form button {
-  padding: 10px 20px;
-  color: black;
-  border: 1px solid rgb(151, 151, 151);
-  width: 25%;
+ 
   border-radius: 20px;
 }
 main .form form .container-btn-form button:hover, main .form .sendTrue .container-btn-form button:hover {
@@ -697,28 +596,32 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
    border: 1px solid red !important;
 }
 .cont-github{
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+
+  
   padding-top: 90px;
-  margin: 0 auto;
-  align-items: center;
+ 
+
 }
-.cont-github .cont-gral{
-  display: flex;
+
+main .formdark .container-input .container-small input, main .formdark .container-check input, main .formdark .container-check textarea{
+  background: #919191;
+  color: white;
 }
+
+main .formdark input::placeholder, main .formdark textarea::placeholder{
+  color: #2b2b2b;
+}
+
 .cont-github .cont-gral .cont-img-git{
   background-color: gainsboro ;
-  padding: 5px;
+ 
   margin-right: 10px;
   border-radius: 4px;
-  width: 40%;
-  height: 40%;
+ 
   
 }
 .cont-github .cont-gral .cont-img-git img{
-    width: 100%;
-    height: 100%;
+  
     border-radius: 10px;
 }
 .cont-github  .cont-info h4{
@@ -739,17 +642,15 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
   font-weight: 600;
 }
 .cont-github .cont-btn-git{
-  display: flex;
   width: 32%;
-  margin-top: 50px;
-  justify-content: space-between;
+ 
 }
 .cont-github .cont-btn-git .git{
-  padding: 10px 20px;
+ 
   color: rgb(36, 36, 36);
   border: 1px solid var(--color-esp);
   text-decoration: none;
-  width: 25%;
+
   border-radius: 20px;
 }
 .cont-github .cont-btn-git .git:hover{
@@ -757,7 +658,7 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
   color: white;
 }
 .cont-github .cont-btn-git .linkedin{
-  padding: 10px 20px;
+
   color: rgb(36,36,36);
   border: 1px solid rgb(20, 99, 190);
   text-decoration: none;
@@ -768,7 +669,7 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
   background-color: rgb(20, 99, 190);
   color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   .hamb,
   .close {
     display: block;
@@ -789,17 +690,20 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
     background: white;
     display: inline-block;
   }
-  .hamb {
+  header .hamb {
     position: relative;
     right: 10px;
+    order: 1 !important;
   }
   .contacto {
     display: none;
   }
   header nav {
     position: fixed;
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: initial !important;
     background: rgb(0, 0, 0);
     top: 0;
     right: 0;
@@ -809,12 +713,14 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
     transform: translateX(100%);
     visibility: hidden;
   }
+
+
   nav.visible {
     transform: translateX(0);
     visibility: visible;
     transition: 0.6s;
   }
-  header nav a {
+  header nav a { 
     padding: 30px 0;
     display: block;
     text-transform: capitalize;
@@ -840,7 +746,7 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
   main .services .container-services {
     flex-direction: column;
   }
-  main .services .container-services .primero {
+  main .services .container-services .gral {
     width: 80%;
   }
   main .proyects .container-proyect {
@@ -901,7 +807,7 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
   main .form form .container-btn-form button {
     min-width: 150px;
   }
-  main .services .container-services .primero .icon i {
+  main .services .container-services .gral .icon i {
     font-size: 40px;
   }
 }
@@ -924,7 +830,7 @@ main .form form .container-btn-form button:hover, main .form .sendTrue .containe
   main .info .container-info p:nth-child(4) {
     font-size: 16px;
   }
-  main .services .container-services .primero h4 {
+  main .services .container-services .gral h4 {
     font-size: 15px;
   }
   main .container-skill .container-hab .skill {

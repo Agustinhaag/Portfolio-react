@@ -1,9 +1,12 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
+import { useDarkMode } from "../context/ModeContext";
 
 const Form = () => {
   const [formSubmit, setFormSubmit] = useState(false);
+const {mode} = useDarkMode()
+
 
   const {
     register,
@@ -28,26 +31,27 @@ const Form = () => {
   };
 
   return (
-    <section id="contact" className="form">
+    <section id="contact" className="form flex flex-col items-center h-full">
       {formSubmit ? (
-        <div className="sendTrue">
+        <div className="sendTrue flex flex-col items-center w-full">
           <h3>Muchas gracias por comunicarse con nosotros.</h3>
-          <p>En breve nos pondremos en contacto.</p>
-          <div className="container-btn-form">
+          <p className="my-4">En breve nos pondremos en contacto.</p>
+          <div className="container-btn-form flex justify-end w-1/2 my-5">
             <button
+            className={mode ? 'text-black py-2.5 px-5 w-1/5 border-2 border-solid border-customPink': "text-black py-2.5 px-5 w-1/5 border border-solid border-customGray"}
               onClick={() => {
                 setFormSubmit(false);
               }}
-            >
+            > 
               Volver
             </button>
           </div>
         </div>
       ) : (
         <>
-          <h2>Contacta conmigo</h2>
-          <form id="form" onSubmit={handleSubmit(submit)}>
-            <div className="container-input">
+          <h2 className={mode ?'text-white':'text-customBlack'}>Contacta conmigo</h2>
+          <form id="form" onSubmit={handleSubmit(submit)} className={mode ? 'formdark flex flex-col w-4/5 mb-12 text-black': 'flex flex-col w-4/5 mb-12 text-black'}>
+            <div className="container-input flex w-full">
               <div className="container-small">
                 <input
                   type="text"
@@ -80,7 +84,7 @@ const Form = () => {
                 type="number"
                 id="telefono"
                 name="telefono"
-                className={errors.telefono ? "error" : ""}
+                className={errors.telefono ? "error" : "" }
                 placeholder="Asunto"
                 {...register("telefono", {
                   required: "El teléfono es requerido",
@@ -106,8 +110,8 @@ const Form = () => {
                 <span className="span-error">{errors.mensaje.message}</span>
               )}
             </div>
-            <div className="container-btn-form">
-              <button type="submit">Enviar</button>
+            <div className="container-btn-form flex justify-center w-full">
+              <button type="submit"  className={mode ? 'bg-slate-300 w-1/4 py-2.5 px-5  border-2 border-solid border-customPink ' : "bg-none w-1/4 py-2.5 px-5 border border-solid border-customBlack"}>Enviar</button>
             </div>
           </form>
         </>

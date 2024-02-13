@@ -17,10 +17,10 @@ const Github = () => {
   return (
     <div>
       <Navbar/>
-      <div className='cont-github'>
-      <div className='cont-gral'>
-         <div className='cont-img-git'>
-        <img src={user.avatar_url} alt={user.name} />
+      <div className='cont-github flex flex-col items-center w-4/5 my-0 mx-auto'>
+      <div className='cont-gral flex'>
+         <div className='cont-img-git p-1 w-2/5 h-2/5'>
+        <img src={user.avatar_url} alt={user.name} className='h-full w-full'/>
       </div>
 
       <div className='cont-info'>
@@ -35,9 +35,9 @@ const Github = () => {
       </div>
      
         
-        <div className='cont-btn-git'>
-          <Link className='git' to={user.html_url}>Github</Link>
-          <Link className='linkedin' to={user.blog}>Linkedin</Link>
+        <div className='cont-btn-git flex justify-between mt-12'>
+          <Link className='git w-1/4 py-2.5 px-5' to={user.html_url}>Github</Link>
+          <Link className='linkedin py-2.5 px-5' to={user.blog}>Linkedin</Link>
         </div>
         
     </div>

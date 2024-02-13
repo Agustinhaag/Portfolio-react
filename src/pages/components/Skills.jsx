@@ -26,11 +26,14 @@ const Skills = () => {
     });
   }, []);
   return (
-    <section id="skill" className="habilidades">
+    <section
+      id="skill"
+      className="habilidades flex flex-col w-full h-full items-center "
+    >
       <h2>HABILIDADES</h2>
-      <div className="container-skill">
-        <div className="container-hab">
-          <div className="skill">
+      <div className="container-skill flex flex-col w-full">
+        <div className="container-hab ">
+          <div className="skill ">
             <p>
               <span className="lista"></span>Html & Css
             </p>
