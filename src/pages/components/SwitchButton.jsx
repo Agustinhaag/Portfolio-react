@@ -12,6 +12,8 @@ const SwitchButton = () => {
     }
    
     useEffect(()=>{
+    
+    
       updateBody(mode)
     },[mode])
    

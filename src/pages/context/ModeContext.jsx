@@ -1,4 +1,4 @@
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext, useState, useEffect } from "react";
 
 const DarkContext = createContext();
 
@@ -10,7 +10,11 @@ export const ModeContextProvider = ({ children }) => {
   const toogleMode = () => {
     setMode(!mode);
   };
-
+useEffect(()=>{
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    toogleMode();
+}
+},[])
   return (
     <DarkContext.Provider value={{ mode, toogleMode }}>
       {children}
