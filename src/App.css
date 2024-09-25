@@ -3,10 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.dimensiones{
-  max-width: 1400px;
-  margin: 0 auto;
-}
+
 body{
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -25,27 +22,14 @@ body.isDark {
   --fondo-section: rgba(160, 158, 158, 0.26);
 }
 
-header {
- 
-  height: 12vh;
 
-  z-index: 200;
-  width: 100%;
- 
-}
 .close,.hamb {
   cursor: pointer;
   display: none;
   transition: 0.4s;
 }
-header .container-head {
-  font-size: 30px;
-  color: var(--color-esp);
-}
-header nav {
-  min-width: 105px;
- 
-}
+
+
 
 
 
