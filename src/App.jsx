@@ -2,7 +2,7 @@ import Perfil from "./pages/Perfil";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Github from "./pages/Github";
-import { ModeContextProvider } from "./pages/context/ModeContext";
+import { ModeContextProvider } from "./context/ModeContext";
 
 function App() {
   return (
