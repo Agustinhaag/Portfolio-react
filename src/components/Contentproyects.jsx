@@ -14,24 +14,27 @@ const Contentproyects = () => {
       >
         PROYECTOS
       </h2>
-     
+
       <div className="relative flex items-center w-full contenedor-principal">
         <button
           id="flecha-izquierda"
           style={{ top: "calc(50% -25%)", lineHeight: "40px" }}
-          className="absolute left-0 z-50 text-4xl text-white duration-300 bg-black border-none rounded cursor-pointer bg-opacity-30 h-2/5 w-11 hover:bg-opacity-80 flecha-izquierda"
+          className="absolute left-0 z-50 text-2xl text-white duration-300 bg-black border-none rounded-tr rounded-br cursor-pointer bg-opacity-30 h-1/4 w-11 hover:bg-opacity-80 flecha-izquierda"
         >
           <i className="fa-solid fa-chevron-left"></i>
         </button>
         <div className="w-full py-5 overflow-hidden contenedor-carrusel scroll-smooth">
           <div className="flex container-proyect flex-nowrap">
-            {data.map((proyect) => (
-              <MyProyects key={proyect.id} proyect={proyect} />
+            {data.map((proyect, index) => (
+              <MyProyects key={proyect.id} proyect={proyect} index={index}/>
             ))}
           </div>
         </div>
-        <button id="flecha-derecha"  style={{ top: "calc(50% -25%)", lineHeight: "40px" }}
-          className="absolute right-0 z-50 text-4xl text-white duration-300 bg-black border-none rounded cursor-pointer bg-opacity-30 h-2/5 w-11 hover:bg-opacity-80 flecha-derecha">
+        <button
+          id="flecha-derecha"
+          style={{ top: "calc(50% -25%)", lineHeight: "40px" }}
+          className="absolute right-0 z-50 text-2xl text-white duration-300 bg-black border-none rounded-tl rounded-bl cursor-pointer bg-opacity-30 h-1/4 w-11 hover:bg-opacity-80 flecha-derecha"
+        >
           <i className="fa-solid fa-chevron-right"></i>
         </button>
       </div>
