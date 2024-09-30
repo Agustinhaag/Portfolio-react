@@ -11,8 +11,7 @@ const Footer = () => {
         mode ? "bg-opacity-50" : "bg-opacity-85"
       } `}
     >
-     
-      <div className="text-2xl gap-2 flex justify-between my-2.5 w-auto">
+      <div className="text-2xl gap-5 flex justify-between my-2.5 w-auto">
         <Link to="https://www.instagram.com/agushaag22/">
           <i className="text-red-600 fa-brands fa-instagram"></i>
         </Link>
@@ -22,7 +21,6 @@ const Footer = () => {
         <Link to="mailto:agustin-haag@hotmail.com">
           <i className="fa-solid fa-envelope text-cyan-600"></i>
         </Link>
-        
       </div>
       <p className="my-4 text-base">&copy;All rights reserved - 2024</p>
     </footer>

@@ -7,6 +7,8 @@ import Form from "../components/Form";
 import Contentproyects from "../components/Contentproyects";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../context/ModeContext";
+import Services from "../components/Services";
+import InfoUser from "../components/InfoUser";
 
 const Perfil = () => {
   const el = useRef(null);
@@ -67,148 +69,14 @@ const Perfil = () => {
             <span ref={el} />
             <Link
               to="https://github.com/Agustinhaag"
-              className="px-8 py-3 mb-10 text-white transition duration-300 border rounded-lg bg-none border-customPink hover:bg-customPink"
+              className="px-8 py-3 text-white transition duration-300 border rounded-lg mb-14 bg-none border-customPink hover:bg-customPink"
             >
               PORTAFOLIO
             </Link>
           </div>
         </section>
-        <section
-          id="info"
-          className="flex w-[95%] h-full mx-auto mt-10 info mb-7 gap-3"
-        >
-          <div className="flex items-center justify-center w-1/3 mb-12 bg-neutral-400 rounded-2xl min-h-48 max-h-96 min-w-64 perfil">
-            <img
-              src="../file/perfil2.png"
-              alt="Agustin Haag"
-              className="w-[90%] h-[90%]"
-            />
-          </div>
-          <div className="w-2/3 mb-16 ">
-            
-            <p
-              className="mb-5 text-3xl font-semibold"
-              style={{ wordBreak: "4px" }}
-            >
-              Hola, soy <label className="text-customPink">Agustin Haag</label>
-            </p>
-            <p
-              className={`${
-                mode ? "text-white" : "text-customGray"
-              } uppercase text-xl mb-5`}
-            >
-              Fullstack developer
-            </p>
-            <p
-              className={`${
-                mode ? "text-white" : "text-customGray"
-              } text-xl w-11/12 mb-10`}
-              style={{ lineHeight: "30px", wordSpacing: "3px" }}
-            >
-              Soy 
-              <span className={mode ? "text-customPink font-semibold px-[6px]" : "text-customGray font-semibold"}>
-                 FullStack developer Jr 
-              </span>
-              y soy egresado de la Tecnicatura superior en programación. Poseo
-              conocimientos en lenguajes como Javascript, NodeJs, React, next,
-              Html, Css, Sql, nosql; además buen manejo de Apis y Json,
-              Boostrap, responsive design, etc. Me considero una persona
-              proactiva, responsable y ofrezco toda mi predisposición para los
-              desafios que se me presenten. Si quieren saber mas los invito a
-              ver mi CV, saludos!.
-            </p>
-            <div className="flex justify-center w-full">
-              <Link
-                to="../file/AGUSTIN HAAG-NUEVO.pdf.pdf"
-                download="CV Agustin Haag"
-                className="px-4 py-2 text-white border rounded-md bg-customPink hover:bg-transparent border-customPink"
-                  
-              >
-                Descargar CV
-              </Link>
-            </div>
-          </div>
-        </section>
-        <section
-          id="servicio"
-          className="flex flex-col items-center h-full services py-7"
-        >
-          <h2 className={mode ? "text-white" : "text-customBlack"}>
-            MIS SERVICIOS
-          </h2>
-          <div className="flex flex-wrap w-full container-services">
-            <div className={mode ? "segundo gral" : "primero gral"}>
-              <div className="icon">
-                <i className="fa-solid fa-code"></i>
-              </div>
-              <h4 className="my-6 text-center">Diseño de sitios web</h4>
-              <span></span>
-              <p>Html - Css - Javascript - Git - Github</p>
-              <p className={mode ? "text-white" : "text-customGray"}>
-                FrontEnd
-              </p>
-              <p>
-                Elaboración de webs dinamicas o estaticas, 100% responsive y
-                adaptable
-              </p>
-            </div>
-            <div className={mode ? "segundo gral" : "primero gral"}>
-              <div className="icon">
-                <i className="fa-brands fa-js"></i>
-              </div>
-              <h4 className="my-6 text-center">Manejo de Javascript/NodeJs</h4>
-              <span></span>
-              <p>React - Json - Express - Next</p>
-              <p>FullStack</p>
-              <p>
-                Manejo de Javascript del lado del cliente y el servidor. Ademas
-                de librerias y frameworks
-              </p>
-            </div>
-            <div className={mode ? "segundo gral" : "primero gral"}>
-              <div className="icon">
-                <i className="fa-brands fa-node"></i>
-              </div>
-              <h4 className="my-6 text-center">Administracion del servidor</h4>
-              <span></span>
-              <p>NodeJS - Express - Postman - Apis Rest - NPM</p>
-              <p>BackEnd</p>
-              <p>Operar con Apis, asincronia y manejo del servidor</p>
-            </div>
-            <div className={mode ? "segundo gral" : "primero gral"}>
-              <div className="icon">
-                <i className="fa-solid fa-user-check"></i>
-              </div>
-              <h4 className="my-6 text-center">habilidades Blandas</h4>
-              <span></span>
-              <p>Desarrollo personal</p>
-              <p>Trabajo en equipo - Adaptabilidad - Responsabilidad</p>
-              <p>Aptitudes y actitudes que promueven un buen desempeño</p>
-            </div>
-            <div className={mode ? "segundo gral" : "primero gral"}>
-              <div className="icon">
-                <i className="fa-solid fa-database"></i>
-              </div>
-              <h4 className="my-6 text-center">Manejo de Base de datos</h4>
-              <span></span>
-              <p>SQL & NOSQL</p>
-              <p>PostgreSQL - MariaDB - MySQL - Firebase - Mongo</p>
-              <p>Operación con bases relacionales y no relacionales</p>
-            </div>
-            <div className={mode ? "segundo gral" : "primero gral"}>
-              <div className="icon">
-                <i className="fa-solid fa-mobile-screen-button"></i>
-              </div>
-              <h4 className="my-6 text-center">Diseño responsive</h4>
-              <span></span>
-              <p>CSS</p>
-              <p>Flex - Grid - Boostrap- Tailwinds</p>
-              <p>
-                Diseño responsive totalmente adaptable a cualquier dispositivo
-              </p>
-            </div>
-          </div>
-        </section>
+       <InfoUser mode={mode}/>
+       <Services mode={mode}/>
         <Skills />
         <Contentproyects />
         <Form />

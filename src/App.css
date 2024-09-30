@@ -43,13 +43,13 @@ body.isDark {
   background: rgba(37, 37, 37, 0.5);
   position: absolute;
   width: 100%;
-  height: 80%;
+  height: 81.6%;
 }
 
 main .banner .container-banner span p {
   font-size: 38px;
   word-spacing: 10px;
-  margin: 30px 0;
+  margin: 30px 0 50px 0;
   min-height: 20vh;
 }
 main .banner .container-banner span p i {
@@ -64,145 +64,47 @@ main .banner .container-banner p:nth-child(3) {
   margin-bottom: 65px;
 }
 
-
-
-
-
-
-
-
-main .services {
-  background: var(--fondo-section);
-}
-main .services h2 {
-  text-decoration: 3px underline rgb(160, 160, 160);
-  text-underline-offset: 5px;
-  text-transform: uppercase;
-
-  margin-bottom: 25px;
+.contGral {
+  @apply w-[30%] h-full min-h-[355px] my-4 mx-auto rounded-lg flex flex-col items-center transition duration-300;
 }
 
-main .services .container-services .gral {
-  width: 30%;
-  height: 100%;
-  min-height: 355px;
-  margin: 15px auto;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.icon {
+  @apply mt-6 text-3xl text-neutral-400;
 }
-.primero {
-  background: white;
-}
-.segundo {
-  background: #2b2b2b;
-}
-main .services .container-services .gral .icon {
-  margin-top: 25px;
-  font-size: 30px;
-  color: rgb(180, 176, 176);
-}
-main .services .container-services .gral h4 {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-main .services .container-services .gral span {
-  border: 1px solid rgb(201, 201, 201);
-  width: 20%;
-  margin-bottom: 20px;
-}
-main .services .container-services .gral p:nth-child(3) {
-  color: rgb(27, 27, 27);
-  font-size: 17px;
-  margin-bottom: 20px;
-  text-align: center;
-  word-spacing: 3px;
-}
-main .services .container-services .gral p:nth-child(4) {
-  color: var(--color-esp);
-  text-align: center;
-  margin-bottom: 18px;
-}
-main .services .container-services .gral:hover {
+.contGral:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.712);
 }
-main .services .container-services .gral p:nth-child(5) {
-  text-align: center;
 
-  margin-bottom: 25px;
-  width: 70%;
-}
-main .services .container-services .gral p:nth-child(6) {
-  text-align: center;
-  width: 90%;
-}
 main .habilidades {
   background-size: cover !important;
   background: linear-gradient(rgba(165, 47, 159, 0.664), rgba(24, 12, 12, 0.8)),
     url(../public/file/fondohab.jpg);
-  padding: 80px 0 40px 0;
-  background-position: center center;
 }
 
-main .habilidades h2 {
-  color: white;
-  font-size: 20px;
-  text-decoration: 2px underline rgb(160, 160, 160);
-  text-underline-offset: 3px;
-  margin-bottom: 40px;
-}
-
-main .container-skill .container-hab {
-  width: 50%;
-  margin: 20px auto;
-  min-width: 200px;
-}
-main .container-skill .container-hab .skill {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  font-size: 19px;
-}
-main .container-skill .container-hab .skill p > span {
-  display: inline-block;
-  margin-right: 20px;
-  height: 10px;
-  width: 10px;
-  background: white;
-  border-radius: 10px;
-}
-main .container-skill .container-hab .barra {
-  width: 100%;
-  height: 5px;
-  background: gray;
-  margin: 10px 0;
-}
 .progreso1,
 .progreso2,
 .progreso3,
 .progreso4 {
   background: white;
+  height: 5px;
 }
-.progreso2,
+
 .progreso3 {
   width: 85%;
-  height: 5px;
 }
 .progreso1 {
   width: 90%;
-  height: 5px;
   animation: progreso1 2s forwards;
 }
 .progreso2 {
+  width: 80%;
   animation: progreso2 2s forwards;
 }
 .progreso3 {
   animation: progreso3 2s forwards;
 }
 .progreso4 {
-  width: 70%;
-  height: 5px;
+  width: 75%;
   animation: progreso4 2s forwards;
 }
 /*-----------Animaciones----------*/
@@ -219,7 +121,7 @@ main .container-skill .container-hab .barra {
     width: 0;
   }
   100% {
-    width: 85%;
+    width: 80%;
   }
 }
 @keyframes progreso3 {
@@ -238,59 +140,12 @@ main .container-skill .container-hab .barra {
     width: 75%;
   }
 }
-
-main .proyects h2 {
-  text-align: center;
-  font-size: 22px;
-  text-decoration: 2px underline rgb(160, 160, 160);
-  text-underline-offset: 3px;
-  margin-bottom: 20px;
-}
-
-main .proyects .contenedor-indicadores .indicadores {
-  margin-right: 10px;
-}
-main .proyects .contenedor-indicadores .indicadores button {
-  background: rgb(100, 100, 100);
-  height: 4px;
-  width: 13px;
-  cursor: pointer;
-  border: none;
-  margin-right: 2px;
-}
-main .proyects .contenedor-indicadores .indicadores button:hover,
-main .proyects .contenedor-indicadores .indicadores button.activo {
-  background: var(--color-esp);
-}
-
-main .proyects .contenedor-principal .flecha-izquierda,
-main .proyects .contenedor-principal .flecha-derecha {
-  position: absolute;
-  border: none;
-  background: rgb(0, 0, 0, 0.3);
-  font-size: 40px;
-  height: 38.5%;
-  top: calc(50% -25%);
-  line-height: 40px;
-  width: 45px;
-  color: white;
-  cursor: pointer;
-  z-index: 300;
-  transition: 0.3s;
-}
-
-main .proyects .contenedor-principal .flecha-izquierda:hover,
-main .proyects .contenedor-principal .flecha-derecha:hover {
-  background: rgb(0, 0, 0, 0.8);
-}
-
 main
   .proyects
   .contenedor-principal
   .contenedor-carrusel
   .container-proyect
   .proyecto {
-  min-width: 20%;
   transition: 1s ease all;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
 }
@@ -300,24 +155,11 @@ main
   .contenedor-carrusel
   .container-proyect
   .proyecto:hover {
-  z-index: 100;
-  cursor: pointer;
   transform: scale(1.1);
   transform-origin: center;
   transition: 1s;
-  border-radius: 10px;
 }
-main
-  .proyects
-  .contenedor-principal
-  .contenedor-carrusel
-  .container-proyect
-  .left:hover {
-  z-index: 100;
-  transform: scale(1.1);
-  transform-origin: left;
-  transition: 1s;
-}
+
 main
   .proyects
   .contenedor-principal
@@ -325,7 +167,6 @@ main
   .container-proyect
   .proyecto
   img {
-  max-height: 238px;
   filter: grayscale(1);
   transition: 0.5s;
   vertical-align: top;
@@ -338,7 +179,6 @@ main
   .proyecto:hover
   img {
   filter: grayscale(0);
-  border-radius: 10px;
 }
 main
   .proyects
@@ -347,32 +187,10 @@ main
   .container-proyect
   .proyecto
   .info-proyecto {
-  background: rgba(0, 0, 0, 0.733);
-  color: var(--color-esp);
-
   bottom: -40px;
   transition: 0.5s;
 }
-main
-  .proyects
-  .contenedor-principal
-  .contenedor-carrusel
-  .container-proyect
-  .proyecto
-  .info-proyecto
-  h4 {
-  padding-bottom: 5px;
-}
-main
-  .proyects
-  .contenedor-principal
-  .contenedor-carrusel
-  .container-proyect
-  .proyecto
-  .info-proyecto
-  p {
-  font-size: 13px;
-}
+
 main
   .proyects
   .contenedor-principal
@@ -382,92 +200,56 @@ main
   .info-proyecto {
   opacity: 1;
   bottom: 0px;
-  border-radius: 0 0 10px 10px;
-}
-main .form {
-  background: var(--fondo-section);
-}
-main .form h2,
-main .form .sendTrue h3 {
-  margin: 70px 0 20px 0;
-
-  text-decoration: 2px underline rgb(170, 170, 170);
-  text-underline-offset: 3px;
-  font-size: 22px;
-}
-main .form .sendTrue {
-  min-height: 30vh;
+  border-radius: 0 0 8px 8px;
 }
 
-main .form .sendTrue .container-btn-form button {
-  border-radius: 20px;
+.cont-input {
+  @apply relative w-full;
 }
-
-main .form form .container-input .container-small {
-  width: 50%;
-  margin-bottom: 10px;
+.label {
+  @apply absolute text-sm font-normal pointer-events-none md:text-base left-4 text-neutral-300;
 }
-main .form form .container-input .container-small input,
-main .form form > .container-check input {
-  width: 100%;
-  padding: 15px 0 15px 5px;
-  outline: none;
-  border: 1px solid rgb(170, 170, 170);
-  border-radius: 15px;
+.labelNoDark {
+  @apply absolute text-sm font-normal pointer-events-none md:text-base left-4 text-neutral-700;
 }
-
-main .form form .container-input .container-small:nth-child(1) {
-  margin-right: 18px;
+.input {
+  @apply w-full p-2 mt-1 text-white bg-transparent border border-white outline-none rounded-xl;
 }
-main .form form .container-check {
-  width: 100%;
-  margin-bottom: 10px;
-}
-main .form form .container-check textarea {
-  outline: none;
-  border: 1px solid rgb(170, 170, 170);
-  border-radius: 15px;
-  height: 30vh;
-  width: 100%;
-  resize: none;
-  padding: 8px 0 0 5px;
-}
-main .form form .container-check textarea::placeholder,
-main .form form .container-input .container-small input::placeholder,
-main .form form .container-check input::placeholder {
-  padding-left: 4px;
-}
-
-main .form form .container-btn-form button {
-  border-radius: 20px;
-}
-main .form form .container-btn-form button:hover,
-main .form .sendTrue .container-btn-form button:hover {
-  transition: 0.4s;
-  cursor: pointer;
-  background: var(--color-esp);
-  color: white;
-}
-.span-error {
-  color: red;
+.inputNoDark {
+  @apply w-full p-2 mt-1 text-black bg-transparent border outline-none border-neutral-500 rounded-xl;
 }
 .error {
-  border: 1px solid red !important;
+  border: 1px solid red;
 }
+.errorLabel {
+  color: red;
+}
+.span {
+  @apply flex justify-start text-xs sm:my-1 md:text-base min-h-6;
+}
+
+.input:focus ~ .label,
+.inputNoDark:focus ~ .labelNoDark,
+.input:not(:placeholder-shown) ~ .label,
+.inputNoDark:not(:placeholder-shown) ~ .labelNoDark {
+  top: 4px !important;
+  left: 15px;
+  font-size: 14px;
+  padding: 0 2px;
+  background-color: #404040;
+}
+.inputNoDark:focus ~ .labelNoDark,
+.inputNoDark:not(:placeholder-shown) ~ .labelNoDark {
+  top: 4px !important;
+  left: 15px;
+  font-size: 14px;
+  padding: 0 2px;
+  color: #404040;
+  background-color: #d4d4d4;
+}
+
 .cont-github {
   padding-top: 90px;
-}
-
-main .formdark .container-input .container-small input,
-main .formdark .container-check input,
-main .formdark .container-check textarea {
-  background: #919191;
-  color: white;
-}
-
-main .formdark input::placeholder,
-main .formdark textarea::placeholder {
-  color: #2b2b2b;
 }
 
 .cont-github .cont-btn-git {
@@ -628,16 +410,7 @@ main .formdark textarea::placeholder {
     .info-proyecto {
     border-radius: 0 0 10px 10px;
   }
-  main .form form .container-input {
-    flex-direction: column;
-  }
-  main .form form .container-input .container-small,
-  main .form form .container-input .container-small input {
-    width: 100%;
-  }
-  main .form form .container-btn-form button {
-    min-width: 150px;
-  }
+
   main .services .container-services .gral .icon i {
     font-size: 40px;
   }

@@ -41,18 +41,18 @@ const Navbar = () => {
         <Link to="/" className="link">
           Sobre mi<span className="enl"></span>
         </Link>
-        <Link href="#servicio" className="link">
+        <a href="#servicio" className="link">
           Servicios<span className="enl"></span>
-        </Link>
+        </a>
         <Link to="/github" id="github" className="link">
           Github<span className="enl"></span>
         </Link>
-        <Link to="#proyect" className="link">
+        <a to="#proyect" className="link">
           Portafolio<span className="enl"></span>
-        </Link>
-        <Link href="#contact" className="link">
+        </a>
+        <a href="#contact" className="link">
           Contacto<span className="enl"></span>
-        </Link>
+        </a>
 
         <span id="cerrar" className="close">
           <i className="fa-solid fa-x"></i>
