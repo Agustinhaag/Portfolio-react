@@ -2,18 +2,21 @@ export const data = [
   {
     id: 1,
     img: "https://i.ibb.co/W3WvzFg/m4-copy.jpg",
+    imgComplete: "https://i.ibb.co/FJjRR53/m4.jpg",
     title: "Web tipo Ecommerce digital",
     description: "Elaborada con NextTs, Express y Typeorm, 100% responsive",
   },
   {
     id: 2,
     img: "https://i.ibb.co/mB4w9RH/pf.jpg",
+    imgComplete: "https://i.ibb.co/5Gm7gbH/pf.jpg",
     title: "Plataforma de gestión de servicios",
     description: "Elaborada con NextTs, Nest y Typeorm, 100% responsive",
   },
   {
     id: 3,
     img: "https://i.ibb.co/MnyVMGR/m3.jpg",
+    imgComplete: "https://i.ibb.co/NZXgS4N/m3.jpg",
     title: "Web de gestión de turnos",
     description: "Elaborada con React, Express y Typeorm, 100% responsive",
   },
