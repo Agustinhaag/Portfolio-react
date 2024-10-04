@@ -248,40 +248,7 @@ main
   background-color: #d4d4d4;
 }
 
-.cont-github {
-  padding-top: 90px;
-}
-
-.cont-github .cont-btn-git {
-  width: 32%;
-}
-.cont-github .cont-btn-git .git {
-  border: 1px solid var(--color-esp);
-  text-decoration: none;
-
-  border-radius: 20px;
-}
-.cont-github .cont-btn-git .git:hover {
-  background-color: var(--color-esp);
-  color: white;
-}
-.cont-github .cont-btn-git .linkedin {
-  border: 1px solid rgb(20, 99, 190);
-  text-decoration: none;
-
-  border-radius: 20px;
-}
-.cont-github .cont-btn-git .linkedin:hover {
-  background-color: rgb(20, 99, 190);
-  color: white;
-}
 @media (max-width: 790px) {
-  .cont-btn-git {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 15px;
-  }
 
   .hamb,
   .close {

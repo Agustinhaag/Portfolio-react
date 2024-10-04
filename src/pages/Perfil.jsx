@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Typed from "typed.js";
 import Skills from "../components/Skills";
 import Form from "../components/Form";
@@ -54,7 +52,7 @@ const Perfil = () => {
 
   return (
     <div>
-      <Navbar />
+  
       <main>
         <section
           id="yo"
@@ -81,7 +79,7 @@ const Perfil = () => {
         <Contentproyects />
         <Form />
       </main>
-      <Footer />
+     
     </div>
   );
 };

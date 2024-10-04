@@ -1,8 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import { useDarkMode } from "../context/ModeContext";
+import UserLinks from "../components/UserLinks";
+import { MdEmail } from "react-icons/md";
+import { FaTable } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoCalendarNumberSharp } from "react-icons/io5";
 
 const Github = () => {
   const { mode } = useDarkMode();
@@ -16,67 +20,91 @@ const Github = () => {
   }, []);
 
   return (
-    <div>
-      <Navbar />
-      <div className="flex flex-col items-center w-4/5 mx-auto my-0 cont-github">
-        <div className="flex flex-col items-center w-11/12 gap-2 md:flex-row ">
-          <div className="w-2/4 p-1 rounded bg-neutral-400md:min-w-96 md:h-96 min-w-64 min-h-64">
+    <main className="flex pt-24">
+      <UserLinks />
+      <div className="flex flex-col items-center md:w-4/5 w-full my-2 ">
+        <div className="flex flex-col items-center w-full gap-2 ">
+          <div className="w-full bg-black  bg-opacity-70  px-2 py-4 rounded flex gap-5 mr-3">
             <img
               src={user.avatar_url}
               alt={user.name}
-              className="w-full h-full rounded"
+              className="sm:w-36 w-28 rounded-full min-h-36 min-w-32 max-h-40"
             />
+            <div className="flex flex-col gap-1 justify-center items-start">
+              <h4 className=" text-3xl text-center">{user.name}</h4>
+              <p className="text-neutral-400 text-sm w-4/5">{user.bio}</p>
+            </div>
           </div>
 
           <div className="w-full">
-            <h4 className="mb-5 text-3xl text-center">{user.name}</h4>
-            <p>
-              <span className="mr-1 font-semibold underline-offset-2" style={{textDecorationColor: "#f072e9"}}>Biografía:</span> {user.bio}
-            </p>
-            <p>
-              <span className="mr-1 font-semibold underline-offset-2" style={{textDecorationColor: "#f072e9"}}>Cantidad de repos:</span> {user.public_repos}
-            </p>
-            <p>
-              <span className="mr-1 font-semibold underline-offset-2" style={{textDecorationColor: "#f072e9"}}>Creacion:</span>
-              {new Date(user.created_at).toLocaleDateString()}
-            </p>
-            <p>
-              <span className="mr-1 font-semibold underline-offset-2" style={{textDecorationColor: "#f072e9"}}> Ubicacion:</span> {user.location}
-            </p>
-            <p>
-              <span className="mr-1 font-semibold underline-offset-2" style={{textDecorationColor: "#f072e9"}}> Email:</span>
-              <Link className="no-underline" to="mailto:agustin-haag@hotmail.com">
-                agustin-haag@hotmail.com
-              </Link>
-            </p>
-            <p>{user.company ? user.company : "Desarrollador independiente"}</p>
+            <div className="flex sm:flex-row flex-col sm:gap-0 gap-2 text-start pt-3 pb-5">
+              <div className="w-1/2 flex flex-col">
+                <p className="font-light flex items-center gap-1 text-neutral-400">
+                  <span className="text-xl text-customPink">
+                    <MdEmail />
+                  </span>
+                  Email:
+                </p>
+                <Link
+                  className="no-underline "
+                  to="mailto:agustin-haag@hotmail.com"
+                >
+                  agustin-haag@hotmail.com
+                </Link>
+              </div>
+              <div className="w-1/2">
+                <p className="font-light flex items-center gap-1 text-neutral-400">
+                  <span className="text-xl text-customPink">
+                    <FaTable />
+                  </span>
+                  Total de repositorios:
+                </p>
+                <p> {user.public_repos}</p>
+              </div>
+            </div>
+            <div className="flex sm:flex-row flex-col sm:gap-0 gap-2 text-start pt-3 pb-5">
+              <div className="w-1/2">
+                <p className="font-light text-neutral-400 flex items-center gap-1">
+                  <span className="text-xl text-customPink">
+                    <IoCalendarNumberSharp />
+                  </span>
+                  Fecha de creación:
+                </p>
+                <p>{new Date(user.created_at).toLocaleDateString()}</p>
+              </div>
+              <div className="w-1/2">
+                <p className="font-light text-neutral-400 flex items-center gap-1">
+                  <span className="text-xl text-customPink">
+                    <FaLocationDot />
+                  </span>
+                  Ubicacion:
+                </p>
+                <p> {user.location}</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="flex justify-between mt-12 cont-btn-git">
+        <div className="flex w-2/5 justify-between mt-12">
           <Link
-            className={
-              mode
-                ? "git py-2.5 px-5 text-white"
-                : "git  py-2.5 px-5 text-customBlack"
-            }
+            className={`
+              ${mode ? " text-white" : "  text-customBlack"}
+           py-2 px-5 border-neutral-900 border-2 rounded-md bg-neutral-900 hover:bg-transparent`}
             to={user.html_url}
           >
             Github
           </Link>
           <Link
-            className={
-              mode
-                ? "linkedin py-2.5 px-5 text-white"
-                : "linkedin py-2.5 px-5 text-customBlack"
-            }
+            className={`
+              ${mode ? " text-white" : "  text-customBlack"}
+            py-2 px-5 border-blue-800 border rounded-md hover:bg-blue-800`}
             to="https://www.linkedin.com/in/agustin-haag/"
           >
             Linkedin
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
