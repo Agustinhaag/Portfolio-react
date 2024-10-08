@@ -25,7 +25,6 @@ body.isDark {
 
 .close,
 .hamb {
-  cursor: pointer;
   display: none;
   transition: 0.4s;
 }
@@ -71,7 +70,7 @@ main .banner .container-banner p:nth-child(3) {
 .icon {
   @apply mt-6 text-3xl text-neutral-400;
 }
-.contGral:hover {
+.contGral:hover, .cardProyect:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.712);
 }
 
@@ -307,14 +306,7 @@ main
     right: 20px;
     top: 20px;
   }
-  nav a > span {
-    width: 6px;
-    height: 6px;
-    margin-left: 8px;
-    border-radius: 10px;
-    background: white;
-    display: inline-block;
-  }
+
   header .hamb {
     position: relative;
     right: 10px;
@@ -379,9 +371,7 @@ main
   main .info .container-info p:nth-child(4) {
     font-size: 16px;
   }
-  main .services .container-services .gral h4 {
-    font-size: 15px;
-  }
+
   main .container-skill .container-hab .skill {
     font-size: 14px;
   }

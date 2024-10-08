@@ -9,7 +9,7 @@ const Proyects = () => {
       <h2 className="mt-2 mb-5 text-3xl">Mis proyectos</h2>
       <div className="grid gap-6 w-full grid-cols-1 md:grid-cols-2">
         {data.map((proyect) => (
-         <CardProyect proyect={proyect}/>
+         <CardProyect key={proyect.id} proyect={proyect}/>
         ))}
       </div>
     </section>
