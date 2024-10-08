@@ -43,7 +43,7 @@ body.isDark {
   background: rgba(37, 37, 37, 0.5);
   position: absolute;
   width: 100%;
-  height: 82.7%;
+  height: 100%;
 }
 
 main .banner .container-banner span p {
@@ -65,7 +65,7 @@ main .banner .container-banner p:nth-child(3) {
 }
 
 .contGral {
-  @apply w-[30%] h-full min-h-[355px] my-4 mx-auto rounded-lg flex flex-col items-center transition duration-300;
+  @apply md:w-[30%] w-5/6 h-full min-h-[355px] my-4 mx-auto rounded-lg flex flex-col items-center transition duration-300;
 }
 
 .icon {
@@ -169,7 +169,6 @@ main
   filter: grayscale(1);
   transition: 0.5s;
   vertical-align: top;
-  
 }
 main
   .proyects
@@ -247,9 +246,55 @@ main
   color: #404040;
   background-color: #d4d4d4;
 }
+.truncate-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 1.2rem;
+}
 
-@media (max-width: 790px) {
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+.modal-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
 
+.modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 800;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 50%;
+  min-height: 28vh;
+  background-color: #2b2b2b;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
   .hamb,
   .close {
     display: block;
@@ -275,114 +320,47 @@ main
     right: 10px;
     order: 1 !important;
   }
-  .contacto {
-    display: none;
-  }
+
   header nav {
     position: fixed;
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: initial !important;
-    background: rgb(0, 0, 0);
+    background-color: #383838;
+    transition: 0.6s;
     top: 0;
     right: 0;
     text-align: right;
     z-index: 300;
-    padding: 60px 20px 0 20px;
+    padding: 70px 20px 0 20px;
     transform: translateX(100%);
     visibility: hidden;
+    gap: 50px;
   }
 
   nav.visible {
     transform: translateX(0);
     visibility: visible;
+
     transition: 0.6s;
+    width: 50%;
+    align-items: end;
   }
   header nav a {
-    padding: 30px 0;
-    display: block;
     text-transform: capitalize;
   }
-
-  main .info {
-    flex-direction: column;
-    align-items: center;
-  }
-  main .info .perfil {
-    width: 50%;
-    height: 300px;
-  }
-  main .info .container-info {
-    width: 100%;
-    margin-top: 40px;
-    padding: 0 0 0 80px;
-  }
-  main .info .container-info .container-btn-info {
-    display: flex;
-    justify-content: center;
-  }
-  main .services .container-services {
-    flex-direction: column;
-  }
-  main .services .container-services .gral {
-    width: 80%;
-  }
-  main .proyects .container-proyect {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-  }
-  main .proyects .contenedor-indicadores,
-  main .proyects .contenedor-principal .flecha-izquierda,
-  main .proyects .contenedor-principal .flecha-derecha {
-    display: none;
-  }
+}
+@media (max-width: 640px) {
   main
     .proyects
     .contenedor-principal
     .contenedor-carrusel
     .container-proyect
-    .proyecto {
-    width: 90%;
-    margin: 20px 0;
-    border-radius: 10px;
-  }
-  main
-    .proyects
-    .contenedor-principal
-    .contenedor-carrusel
-    .container-proyect
-    .left:hover {
-    z-index: 100;
-    transform: scale(1.1);
-    transform-origin: center;
+    .proyecto:hover {
+    transform: scale(1);
     transition: 1s;
   }
-  main
-    .proyects
-    .contenedor-principal
-    .contenedor-carrusel
-    .container-proyect
-    .proyecto
-    img {
-    border-radius: 10px;
-  }
-  main
-    .proyects
-    .contenedor-principal
-    .contenedor-carrusel
-    .container-proyect
-    .proyecto
-    .info-proyecto {
-    border-radius: 0 0 10px 10px;
-  }
-
-  main .services .container-services .gral .icon i {
-    font-size: 40px;
-  }
-}
-@media (max-width: 550px) {
   main .banner .container-banner p {
     font-size: 28px;
   }

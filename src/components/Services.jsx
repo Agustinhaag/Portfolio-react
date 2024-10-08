@@ -17,7 +17,7 @@ const Services = ({ mode }) => {
       >
         MIS SERVICIOS
       </h2>
-      <div className="flex flex-wrap w-full container-services">
+      <div className="flex flex-wrap w-full md:flex-row flex-col container-services">
         <div className={mode ? "bg-customGray contGral" : "bg-white contGral"}>
           <div className="icon">
             <i className="fa-solid fa-code"></i>

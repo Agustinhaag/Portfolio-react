@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const InfoUser = ({ mode }) => {
   return (
     <section
       id="info"
-      className="flex w-[95%] h-full mx-auto mt-10 info mb-7 gap-3"
+      className="flex w-[95%] h-full mx-auto mt-10 info md:flex-row flex-col md:items-start items-center mb-7 gap-3"
     >
-      <div className="flex items-center justify-center w-1/4 mb-12 bg-neutral-400 rounded-2xl min-h-48 max-h-96 min-w-72 perfil">
+      <div className="flex items-center justify-center md:w-1/4 w-1/2  mb-12 bg-neutral-400 rounded-2xl min-h-48 md-h-auto h-[340px] min-w-72 perfil">
         <img
           src="../file/perfil2.png"
           alt="Agustin Haag"

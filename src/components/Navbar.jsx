@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import SwitchButton from "./SwitchButton";
 import { useDarkMode } from "../context/ModeContext";
+import PATHROUTES from "../helpers/pathroute";
 
 const Navbar = () => {
   const { mode } = useDarkMode();
@@ -36,22 +37,22 @@ const Navbar = () => {
       <div className="text-3xl italic text-customPink">| AH |</div>
       <nav
         id="menu"
-        className="flex items-center justify-between ml-4 text-center min-w-[105px]"
+        className="flex items-center  justify-between ml-4 text-center min-w-[200px]"
       >
-        <Link to="/" className="link">
-          Sobre mi<span className="enl"></span>
+        <Link to={PATHROUTES.HOME} className="link">
+          Sobre mi
         </Link>
-        <a href="#servicio" className="link">
-          Servicios<span className="enl"></span>
+        <a href="/#servicio" className="link">
+          Servicios
         </a>
-        <Link to="/github" id="github" className="link">
-          Github<span className="enl"></span>
+        <Link to={PATHROUTES.GITHUB} id="github" className="link">
+          Github
         </Link>
-        <a to="#proyect" className="link">
-          Portafolio<span className="enl"></span>
+        <a href="/#proyect" className="link">
+          Portafolio
         </a>
-        <a href="#contact" className="link">
-          Contacto<span className="enl"></span>
+        <a href="/#contact" className="link">
+          Contacto
         </a>
 
         <span id="cerrar" className="close">

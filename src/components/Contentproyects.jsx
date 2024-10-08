@@ -15,7 +15,7 @@ const Contentproyects = () => {
         PROYECTOS
       </h2>
 
-      <div className="relative flex items-center w-full contenedor-principal">
+      <div className="relative flex items-center sm:w-full w-4/5 mx-auto contenedor-principal">
         <button
           id="flecha-izquierda"
           style={{ top: "calc(50% -25%)", lineHeight: "40px" }}
@@ -24,7 +24,7 @@ const Contentproyects = () => {
           <i className="fa-solid fa-chevron-left"></i>
         </button>
         <div className="w-full py-5 overflow-hidden contenedor-carrusel scroll-smooth">
-          <div className="flex container-proyect flex-nowrap">
+          <div className="flex container-proyect  flex-nowrap">
             {data.map((proyect, index) => (
               <MyProyects key={proyect.id} proyect={proyect} index={index}/>
             ))}

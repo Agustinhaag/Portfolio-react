@@ -53,10 +53,10 @@ const Perfil = () => {
   return (
     <div>
   
-      <main>
+      <main className="pt-24">
         <section
           id="yo"
-          className="relative flex flex-col items-center h-full pt-24 pb-10 text-white bg-cover banner"
+          className="relative flex flex-col items-center h-full   text-white bg-cover banner"
           style={{
             backgroundImage: "url(/file/banner.png)",
             backgroundPosition: "center",
