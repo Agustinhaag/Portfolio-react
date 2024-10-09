@@ -13,21 +13,21 @@ const InfoUser = ({ mode }) => {
           className="w-[90%] h-[90%] rounded"
         />
       </div>
-      <div className="w-2/3 mb-16 ">
-        <p className="mb-5 text-3xl font-semibold" style={{ wordBreak: "4px" }}>
+      <div className="md:w-2/3 w-full mb-16 ">
+        <p className="mb-5 custom:text-3xl text-2xl font-semibold" style={{ wordBreak: "4px" }}>
           Hola, soy <label className="text-customPink">Agustin Haag</label>
         </p>
         <p
           className={`${
             mode ? "text-white" : "text-customGray"
-          } uppercase text-xl mb-5`}
+          } uppercase custom:text-xl text-lg mb-5`}
         >
           Fullstack developer
         </p>
         <p
           className={`${
             mode ? "text-white" : "text-customGray"
-          } text-xl w-11/12 mb-10`}
+          } custom:text-xl text-base w-11/12 mb-10`}
           style={{ lineHeight: "30px", wordSpacing: "3px" }}
         >
           Soy
