@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import LanguageCv from "./LanguageCv";
 
 const InfoUser = ({ mode }) => {
+  const [language, setLanguage] = useState("Es");
   return (
     <section
       id="info"
@@ -13,8 +15,11 @@ const InfoUser = ({ mode }) => {
           className="w-[90%] h-[90%] rounded"
         />
       </div>
-      <div className="md:w-2/3 w-full mb-16 ">
-        <p className="mb-5 custom:text-3xl text-2xl font-semibold" style={{ wordBreak: "4px" }}>
+      <div className="w-full mb-16 md:w-2/3 ">
+        <p
+          className="mb-5 text-2xl font-semibold custom:text-3xl"
+          style={{ wordBreak: "4px" }}
+        >
           Hola, soy <label className="text-customPink">Agustin Haag</label>
         </p>
         <p
@@ -47,14 +52,22 @@ const InfoUser = ({ mode }) => {
           responsable y ofrezco toda mi predisposición para los desafios que se
           me presenten. Si quieren saber mas los invito a ver mi CV, saludos!.
         </p>
-        <div className="flex justify-center w-full">
+        <div className="flex flex-col justify-center w-full gap-2 sm:flex-row">
           <a
-            href="../file/Agustin-Haag.pdf"
+            href={`../file/${
+              language === "Es" ? "Agustin Haag.pdf" : "CVingles.pdf"
+            }`}
             download="CV Agustin Haag"
-            className="px-4 py-2 text-white border rounded-md bg-customPink hover:bg-transparent border-customPink"
+            className="w-4/5 px-4 py-2 mx-auto text-center text-white border rounded-md sm:mx-0 sm:w-auto bg-customPink hover:bg-transparent border-customPink"
           >
             Descargar CV
           </a>
+
+          <LanguageCv
+            mode={mode}
+            language={language}
+            setLanguage={setLanguage}
+          />
         </div>
       </div>
     </section>

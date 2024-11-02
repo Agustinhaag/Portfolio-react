@@ -14,7 +14,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Perfil />} />
-            {/* <Route path="/github" element={<Github />} /> */}
+            
             <Route path="/perfil/:detail" element={<Github />} />
           </Routes>
           <Footer />
